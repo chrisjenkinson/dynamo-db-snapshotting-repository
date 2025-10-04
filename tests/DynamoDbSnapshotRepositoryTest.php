@@ -31,6 +31,20 @@ final class DynamoDbSnapshotRepositoryTest extends TestCase
             ]),
         );
 
+        $inputBuilder = new InputBuilder();
+        $tableName    = 'snapshots';
+
+        $result = $this->client->tableNotExists($inputBuilder->buildDescribeTableInput($tableName));
+        $result->resolve();
+
+        if (!$result->isSuccess()) {
+            $this->client->deleteTable($inputBuilder->buildDeleteTableInput($tableName));
+        }
+
+        $this->client->createTable($inputBuilder->buildCreateTableInput($tableName));
+
+        $this->client->tableExists($inputBuilder->buildDescribeTableInput($tableName))->wait();
+
         return new DynamoDbSnapshotRepository(
             $this->client,
             new InputBuilder(),

@@ -1,0 +1,53 @@
+{
+    "name": "chrisjenkinson/dynamo-db-snapshotting-repository",
+    "description": "Snapshotting functionality for Broadway using DynamoDB",
+    "license": "GPL-3.0-or-later",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chris Jenkinson"
+        }
+    ],
+    "require": {
+        "async-aws/dynamo-db": "^3.7.0",
+        "broadway/broadway": "^2.4.0",
+        "broadway/snapshotting": "^0.3.0"
+    },
+    "require-dev": {
+        "infection/infection": "0.31.2",
+        "phpstan/phpstan": "1.8.0",
+        "phpunit/phpunit": "9.5.0",
+        "symplify/easy-coding-standard": "12.5.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "chrisjenkinson\\DynamoDbSnapshottingRepository\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "chrisjenkinson\\DynamoDbSnapshottingRepository\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    },
+    "scripts": {
+        "tests": [
+            "@phpunit",
+            "@infection",
+            "@phpstan"
+        ],
+        "phpunit": [
+            "phpunit"
+        ],
+        "infection": [
+            "infection --threads=max"
+        ],
+        "phpstan": [
+            "phpstan"
+        ]
+    }
+}

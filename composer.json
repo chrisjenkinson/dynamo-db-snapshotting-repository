@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "async-aws/dynamo-db": "^3.7.0",
+        "async-aws/dynamo-db": "^1.3.0 || ^3.0.0",
         "broadway/broadway": "^2.4.0",
         "broadway/snapshotting": "^0.3.0"
     },

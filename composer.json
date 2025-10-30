@@ -18,7 +18,7 @@
         "infection/infection": "0.31.2",
         "phpstan/phpstan": "2.1.30",
         "phpunit/phpunit": "9.5.0",
-        "symplify/easy-coding-standard": "12.6.0"
+        "symplify/easy-coding-standard": "12.6.2"
     },
     "autoload": {
         "psr-4": {

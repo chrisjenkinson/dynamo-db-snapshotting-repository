@@ -15,7 +15,7 @@
         "broadway/snapshotting": "^0.3.0"
     },
     "require-dev": {
-        "infection/infection": "0.31.9",
+        "infection/infection": "0.32.6",
         "phpstan/phpstan": "2.1.42",
         "phpunit/phpunit": "9.6.33",
         "symplify/easy-coding-standard": "13.0.4"

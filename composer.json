@@ -16,7 +16,7 @@
     },
     "require-dev": {
         "infection/infection": "0.32.6",
-        "phpstan/phpstan": "2.1.44",
+        "phpstan/phpstan": "2.1.46",
         "phpunit/phpunit": "9.6.33",
         "symplify/easy-coding-standard": "13.0.4"
     },
